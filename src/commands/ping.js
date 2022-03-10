@@ -3,8 +3,8 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("ping")
-    .setDescription("Get the bots latency!"),
+    .setDescription("Returns the bots API latency"),
   execute: async (interaction, client, discord) => {
-    return interaction.reply(`Pong \`${client.ws.ping}ms\` 🏓`);
+    return interaction.reply(`Pong! API Latency is \`${client.ws.ping}ms\` `);
   },
 };
