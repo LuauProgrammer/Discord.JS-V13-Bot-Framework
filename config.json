@@ -1,6 +1,17 @@
 {
-    "token": "",
+    "token": "OTg5MzMzMjIwNTQ4MDQ2OTA4.GbZz6W.akGJw26lvp6l78kPeZTmVBqBbkhYrH9pM7k7So",
+    "mongoPath": "mongodb+srv://Akina:pw3ye8eKoy61d25l@serverlessinstance.byjaw.mongodb.net/data?retryWrites=true&w=majority",
+    "statuses": [
+        "with interactions",
+        "with code",
+        "with you",
+        "in chernobyl reactor 4",
+        "with the developers console",
+        "at your house",
+        "with a gun"
+    ],
     "colors": {
+        "bot": "#A02F27",
         "error": "#de554e",
         "neutral": "#F6911E",
         "success": "#43d177"

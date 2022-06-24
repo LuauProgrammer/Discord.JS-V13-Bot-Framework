@@ -1,16 +1,20 @@
-const Discord = require("discord.js")
-const { Client, Intents, Collection } = Discord
-const botClient = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+const discord = require("discord.js");
+const { Client, Intents, Collection } = discord
+const client = new Client({
+    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES],
 });
 
-botClient.config = require("../config.json")
-botClient.commands = new Collection();
-botClient.commandarray = [];
+
+client.config = require("../config.json");
+client.commands = new Collection();
+client.commandArray = [];
+client.utilities = {
+    mongo: require("./utilities/mongo.js"),
+    embed: require("./utilities/embed.js")
+};
 
 ['commandHandler', 'eventHandler'].forEach(handler => {
-  require(`./handlers/${handler}`)(botClient, Discord);
-})
+    require(`./handlers/${handler}`)(client, discord);
+});
 
-
-botClient.login(process.env.token || botClient.config.token); 
+client.login(process.env.TOKEN || client.config.token); 

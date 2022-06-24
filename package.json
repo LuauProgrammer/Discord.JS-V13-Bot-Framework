@@ -1,23 +1,19 @@
 {
-  "name": "v13framework",
+  "name": "djs-v13-bot-framework",
   "version": "1.0.0",
+  "description": "Simple Functionally Programmed JavaScript Bot Framework.",
   "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "LuauProgrammer",
   "license": "MIT",
-  "scripts": {
-    "dev": "nodemon .",
-    "start": "node ."
-  },
   "dependencies": {
-    "@discordjs/builders": "^0.8.1",
-    "@discordjs/rest": "^0.1.0-canary.0",
-    "discord-api-types": "^0.24.0",
-    "discord.js": "^13.3.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.12"
-  },
-  "engines": {
-    "node": ">=16.6.0"
+    "@discordjs/builders": "^0.15.0",
+    "@discordjs/rest": "^0.5.0",
+    "discord-api-types": "^0.34.0",
+    "discord.js": "^13.8.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0"
   }
 }
